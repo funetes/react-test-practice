@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
+import React from 'react';
+import NameForm from './NameForm';
+import NameList from './NameList';
+class App extends React.Component {
+  state = {
+    names: ['벨로퍼트', '김민준'],
+  };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  onInsert = (name) => {
+    this.setState(({ names }) => ({ names: names.concat(name) }));
+  };
+  render() {
+    const { names } = this.state;
+    const { onInsert } = this;
+
+    return (
+      <div>
+        <Counter />
+        <hr />
+        <h1>이름 목록</h1>
+        <NameForm onInsert={onInsert} />
+        <NameList names={names} />
+      </div>
+    );
+  }
 }
 
 export default App;
