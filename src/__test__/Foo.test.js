@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Foo from './Foo';
+import Foo from '../Foo';
 
 describe('Counter', () => {
   let component = null;

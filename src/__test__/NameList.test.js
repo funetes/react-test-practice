@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import randerer from 'react-test-renderer';
-import NameList from './NameList';
+import NameList from '../NameList';
 
 describe('NameListComponet', () => {
   let component = null;

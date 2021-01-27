@@ -2,7 +2,7 @@
 import React from 'react';
 // import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import NameForm from './NameForm';
+import NameForm from '../NameForm';
 
 describe('NameForm Component', () => {
   let component = null;
